@@ -35,7 +35,7 @@ public class RegisterProcessor {
         }
 
         String accessToken = StringOperator.generateRandomLine(15);
-        final var responseDto = new RegisterExtensionResponse(userName, accessToken);
+        final var responseDto = new RegisterExtensionResponse(accessToken, userName);
         DatabaseOperations.registerUser(userName, passWord, accessToken);
         return gson.toJson(responseDto);
     }

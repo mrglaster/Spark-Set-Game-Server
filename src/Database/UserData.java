@@ -4,24 +4,26 @@ public class UserData {
     private static String password;
     private static String token;
     public UserData(String password, String token){
+        setPassword(password);
+        setToken(token);
     }
 
     public void setPassword(String passwordNew){
-        if (password.length() == 0) try {
+        if (passwordNew.length() == 0) try {
             throw new Exception("No password found!");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        this.password = passwordNew;
+        password = passwordNew;
     }
 
-    public void setToken(String token){
-        if (token.length() == 0) try {
+    public void setToken(String tokenNew){
+        if (tokenNew.length() == 0) try {
             throw new Exception("No token found!");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        this.token = token;
+        token = tokenNew;
     }
 
     public static String getPassword() {
@@ -32,5 +34,8 @@ public class UserData {
         return token;
     }
 
-
+    @Override
+    public String toString(){
+        return "{" + password + " ; " + token + " }";
+    }
 }

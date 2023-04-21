@@ -10,7 +10,6 @@ import com.google.gson.JsonObject;
 import spark.Request;
 import spark.Response;
 
-import javax.xml.crypto.Data;
 
 import static RequestProcessor.RegisterProcessor.PARAMETERS_ERROR;
 
@@ -25,14 +24,13 @@ public class AuthProcessor {
         }
         String userName = request.get("nickname").getAsString();
         String passWord = request.get("password").getAsString();
-        System.out.println(userName + passWord);
-        if (DatabaseOperations.isUserRegistered(userName) || userName.length() == 0 || passWord.length() == 0 || !DatabaseOperations.isValidAuthData(userName, passWord)){
+        if (!DatabaseOperations.isUserRegistered(userName) || userName.length() == 0 || passWord.length() == 0 || !DatabaseOperations.isValidAuthData(userName, passWord)){
             final ExceptionDto exceptionDto = new ExceptionDto(WRONG_AUTHDATA);
             final ExtensionResponseDto extensionResponseDto = new ExtensionResponseDto(false, exceptionDto);
             return gson.toJson(extensionResponseDto);
         }
         String userToken = DatabaseOperations.getUserData(userName).getToken();
-        final var authDto = new RegisterExtensionResponse(userName, userToken);
+        final var authDto = new RegisterExtensionResponse(userToken, userName);
         return gson.toJson(authDto);
     }
 }

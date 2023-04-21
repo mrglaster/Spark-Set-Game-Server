@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**Class providing operations with our a-la database*/
 public class DatabaseOperations{
-    private static final HashMap<String, UserData> users = new HashMap<String, UserData>();
+    public static final HashMap<String, UserData> users = new HashMap<String, UserData>();
 
     /**Checks if a user is registered*/
     public static boolean isUserRegistered(String userName){
@@ -28,7 +28,6 @@ public class DatabaseOperations{
 
     /**Checks if user has valid auth data*/
     public static boolean isValidAuthData(String userName, String password){
-        System.out.println(users.get(userName).getPassword());
         return Objects.equals(users.get(userName).getPassword(), password);
     }
 
