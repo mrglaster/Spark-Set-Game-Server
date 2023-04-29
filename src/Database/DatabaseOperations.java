@@ -20,7 +20,7 @@ public class DatabaseOperations{
 
     /**Checks if token is valid*/
     public static boolean isValidToken(String token){
-        for (UserData t:users.values()){
+        for (UserData t: users.values()){
             if (Objects.equals(t.getToken(), token)) return true;
         }
         return false;
