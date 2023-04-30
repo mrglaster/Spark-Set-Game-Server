@@ -6,7 +6,6 @@ import spark.Spark;
 
 public class Main {
     public static void main(String[] args) {
-        /*
         Spark.init();
         String applicationType = "application/json";
         Spark.post("/user/register", applicationType , RegisterProcessor::processRegisterRequest);
@@ -14,12 +13,11 @@ public class Main {
         Spark.post("/set/room/create", applicationType, RoomProcessor::processRoomCreate);
         Spark.post("/set/room/list", applicationType, RoomProcessor::processRoomList);
         Spark.post("/set/room/enter", applicationType, RoomProcessor::processRoomEnter);
+        Spark.post("/set/room/leave", applicationType, RoomProcessor::processRoomLeave);
         Spark.post("/set/field", applicationType, GameProcessor::processGetField);
         Spark.post("/set/pick", applicationType, GameProcessor::processPick );
         Spark.post("/set/add", applicationType, GameProcessor::processAdd);
         Spark.post("/set/scores", applicationType, GameProcessor::processScores);
-        */
-        System.out.println(Game.GameOperations.generateField());
     }
 
 }
