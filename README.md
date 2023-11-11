@@ -1,8 +1,8 @@
 
-## SET Game Server
+# SET Game Server
 
 
-### Russian
+## Russian
 
 Название игры «Set» переводится как «набор» – суть игры заключается в обнаружении разрешённых комбинаций карт (наборов) среди двенадцати карт, выложенных на стол. В отличие от многих других игр в Сете все игроки играют одновременно – задача каждого из них первым обнаружить набор.
 
@@ -20,16 +20,11 @@
 5) Обрабатываются все возможные ситуации
 
 
-<br>
-<br>
-<br>
-<br>
 
 
 
 
-
-### English
+## English
 
 The name of the game "Set" is translated as "set" - the essence of the game is to find the allowed combinations of cards (sets) among the twelve cards laid out on the table. Unlike many other games in the Set, all players play at the same time - the task of each of them is to be the first to discover the set.
 
